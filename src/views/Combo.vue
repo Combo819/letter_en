@@ -6,7 +6,7 @@
           <v-img
             @mouseover="mouseOverImage()"
             @mouseleave="mouseOutImage()"
-            :src="require('../assets/IMG_20190321_004613.jpg')"
+            :src="require('../assets/DSC_1593.jpg')"
           >
             <div
               @mouseout="mouseOutImage()"
@@ -23,27 +23,43 @@
                 dark
                 size="80"
               >play_arrow</v-icon>
-              <v-icon
+              <!-- <v-icon
                 @mouseout="(e)=>{e.stopPropagation()}"
                 v-show="!playIcon"
                 @click="pauseMusic()"
                 class="play-icon pausePositon"
                 dark
                 size="80"
-              >play_pause</v-icon>
+              >play_pause</v-icon> -->
+              <v-layout
+              @mouseout="(e)=>{e.stopPropagation()}"
+              @click="pauseMusic()"
+              style="width=100%;height=100%;"
+              v-show="!playIcon"
+              justify-center
+              align-center
+            >
+              <v-flex>
+                <img
+                  src="../assets/baseline-pause-24px.svg"
+                  alt="triangle with all three sides equal"
+                  width="10%"
+                >
+              </v-flex>
+            </v-layout>
             </div>
           </v-img>
           <v-container grid-list-md text-xs-center>
             <v-layout class="mt-5 mb-5" align-center justify-center>
             </v-layout>
-            <Narratage :narratage="{text:'吾日三省吾身' }"/>
-            <Dialog :dialog="{ position:'left',text:'关心女朋友了吗' }"/>
-            <Dialog :dialog="{ position:'left',text:'学前端了吗' }"/>
-            <Dialog :dialog="{ position:'left',text:'刷算法了吗' }"/>
+            <Narratage :narratage="{text:'What am I doing today?' }"/>
+            <Dialog :dialog="{ position:'left',text:'Studying?' }"/>
+            <Dialog :dialog="{ position:'left',text:'Playing?' }"/>
+            <Dialog :dialog="{ position:'left',text:'Sleeping' }"/>
           </v-container>
           <transition name="fade">
             <v-btn color="primary"  @click="nextPage()" large block>
-              米奇♂妙妙屋
+              Next Page
               <v-icon x-large>chevron_right</v-icon>
             </v-btn>
           </transition>

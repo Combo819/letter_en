@@ -3,16 +3,16 @@
     <v-container grid-list-md text-xs-center>
       <v-layout class="mt-5" align-center justify-center>
         <v-flex>
-          <div class="display-2">Love Letter</div>
+          <div class="display-2">Letter</div>
         </v-flex>
       </v-layout>
 
       <v-layout class="mt-5" align-center justify-center row fill-height wrap>
-        <data-selector  :route='"/xiaoxiao"'    :name='"晓潇"'></data-selector>
+        <data-selector  :route='"/xiaoxiao"'    :name='"Hannah"'></data-selector>
         <v-flex xs12 sm12 md2>
 
         </v-flex>
-        <data-selector :boy='true' :route='"/combo"'  :name='"黄康"'></data-selector>
+        <data-selector :boy='true' :route='"/combo"'  :name='"Combo"'></data-selector>
       </v-layout>
     </v-container>
   </div>

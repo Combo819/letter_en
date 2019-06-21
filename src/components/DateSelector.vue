@@ -4,18 +4,18 @@
       <template v-slot:activator="{ on }">
         <v-flex v-on='on' xs10 md4 >
           <v-card hover  >
-            <img v-if='boy' style="width:100%" :src='"../assets/WechatIMG62.jpeg"'/>
-            <img v-else style="width:100%" :src='"../assets/zxx-9.0091fdfc.jpg"'/>
+            <img v-if='boy' style="width:100%" :src='"../assets/DSC_9341.jpg"'/>
+            <img v-else style="width:100%" :src='"../assets/DSC_1298_3.jpg"'/>
             
-            <v-card-title  class="headline text-center" primary-title>我是{{name}}</v-card-title>
+            <v-card-title  class="headline text-center" primary-title>This is {{name}}</v-card-title>
           </v-card>
         </v-flex>
       </template>
       <v-card>
-        <v-card-title class="headline text-center">表白日期</v-card-title>
+        <v-card-title class="headline text-center">(Select Apirl 13th)</v-card-title>
         
         <v-layout  align-center justify-center row fill-height wrap>
-          <v-flex md9>
+          <v-flex text-xs-center md9>
 
 <v-alert
       :value="this.alert.success"
@@ -23,7 +23,7 @@
       transition="scale-transition"
       outline
     >
-      答对啦！
+      Correct！
     </v-alert>
     <v-alert
       :value="this.alert.error"
@@ -31,7 +31,7 @@
       transition="scale-transition"
       outline
     >
-      答错啦！
+      Wrong！
     </v-alert>
         <v-date-picker v-model="picker" color="blue lighten-3"></v-date-picker>
           </v-flex>
